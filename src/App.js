@@ -5,6 +5,13 @@ import HomeLayout from "./components/HomeLayout";
 import ReactLogo from "./components/ReactLogo";
 import styled from "styled-components";
 
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+`;
+
 function App() {
   return (
     <div>
@@ -18,12 +25,5 @@ function App() {
     </div>
   );
 }
-
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-`;
 
 export default App;
