@@ -2,8 +2,11 @@ import React from "react";
 import "./App.css";
 import Navbar from "./Navbar";
 import HomeLayout from "./components/HomeLayout";
-import ReactLogo from "./components/ReactLogo";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 import styled from "styled-components";
+import { BrowserRouter as Router } from "react-router-dom";
+import AppRoutes from "./Routes";
 
 const Container = styled.div`
   display: flex;
@@ -14,15 +17,16 @@ const Container = styled.div`
 
 function App() {
   return (
-    <div>
-      <Container>
-        <header className="App-header">
-          <Navbar />
-        </header>
-      </Container>
-      <HomeLayout />
-      <ReactLogo />
-    </div>
+    <Router>
+      <div>
+        <Container>
+          <header>
+            <Navbar />
+          </header>
+        </Container>
+        <AppRoutes />
+      </div>
+    </Router>
   );
 }
 

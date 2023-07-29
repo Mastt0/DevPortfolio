@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const NavbarContainer = styled.nav`
   position: absolute;
@@ -20,7 +21,7 @@ const NavbarItem = styled.li`
   margin-left: 20px;
 `;
 
-const NavbarLink = styled.a`
+const StyledLink = styled(Link)`
   color: white;
   text-decoration: none;
 `;
@@ -30,13 +31,13 @@ const Navbar = () => {
     <NavbarContainer>
       <NavbarList>
         <NavbarItem>
-          <NavbarLink href="/">Home</NavbarLink>
+          <StyledLink to="/">Home</StyledLink>
         </NavbarItem>
         <NavbarItem>
-          <NavbarLink href="/projects">Projects</NavbarLink>
+          <StyledLink to="/projects">Projects</StyledLink>
         </NavbarItem>
         <NavbarItem>
-          <NavbarLink href="/contact">Contact</NavbarLink>
+          <StyledLink to="/contact">Contact</StyledLink>
         </NavbarItem>
       </NavbarList>
     </NavbarContainer>
