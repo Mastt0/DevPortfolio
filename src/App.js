@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import styled from "styled-components";
 import { BrowserRouter as Router } from "react-router-dom";
 import AppRoutes from "./Routes";
+import { GlobalStyle } from "./assets/GlobalStyle";
 
 const Container = styled.div`
   display: flex;
@@ -15,7 +16,8 @@ const Container = styled.div`
 function App() {
   return (
     <Router>
-      <div style={{ backgroundColor: "black", color: "white" }}>
+      <div>
+        <GlobalStyle />
         <Container>
           <header>
             <Navbar />

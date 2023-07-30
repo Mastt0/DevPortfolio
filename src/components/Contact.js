@@ -11,7 +11,7 @@ const ContactContainer = styled.ul`
   width: 100%;
   background-color: black;
   font-weight: 299;
-  color: black;
+  color: white;
 `;
 
 const Contact = () => {
