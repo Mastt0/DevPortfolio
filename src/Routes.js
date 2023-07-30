@@ -1,15 +1,41 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
+
+import Navbar from "./Navbar";
 import Home from "./components/HomeLayout";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 export default function AppRoutes() {
-  return (
-    <Routes>
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/projects" element={<Projects />} />
-      <Route path="/" element={<Home />} />
-    </Routes>
-  );
+  let element = useRoutes([
+    {
+      path: "/",
+      element: (
+        <>
+          <Navbar />
+          <Home />
+        </>
+      ),
+    },
+    {
+      path: "projects",
+      element: (
+        <>
+          <Navbar />
+          <Projects />
+        </>
+      ),
+    },
+    {
+      path: "contact",
+      element: (
+        <>
+          <Navbar />
+          <Contact />
+        </>
+      ),
+    },
+  ]);
+
+  return element;
 }

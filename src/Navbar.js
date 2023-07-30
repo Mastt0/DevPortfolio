@@ -21,6 +21,7 @@ const NavbarList = styled.ul`
   background-color: cyan;
   font-weight: 900;
   justify-content: flex-end;
+  z-index: 999;
 `;
 
 const NavbarItem = styled.li`
@@ -37,7 +38,7 @@ const Navbar = () => {
     <NavbarContainer>
       <NavbarList>
         <NavbarItem>
-          <StyledLink to="/">Home</StyledLink>
+          <StyledLink to="/">About</StyledLink>
         </NavbarItem>
         <NavbarItem>
           <StyledLink to="/projects">Projects</StyledLink>

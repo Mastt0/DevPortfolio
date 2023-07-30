@@ -18,10 +18,9 @@ function App() {
     <Router>
       <div>
         <GlobalStyle />
+        <Navbar />
         <Container>
-          <header>
-            <Navbar />
-          </header>
+          <header></header>
         </Container>
         <AppRoutes />
       </div>
