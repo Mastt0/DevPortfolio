@@ -15,6 +15,12 @@ const NavbarList = styled.ul`
   display: flex;
   margin: 0;
   padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: cyan;
+  font-weight: 900;
+  justify-content: flex-end;
 `;
 
 const NavbarItem = styled.li`
@@ -22,7 +28,7 @@ const NavbarItem = styled.li`
 `;
 
 const StyledLink = styled(Link)`
-  color: white;
+  color: black;
   text-decoration: none;
 `;
 
