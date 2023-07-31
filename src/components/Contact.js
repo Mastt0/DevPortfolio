@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
+import { IoLogoDiscord } from "react-icons/io5";
 
 const ContactContainer = styled.div`
   display: flex;
@@ -24,8 +25,13 @@ const SocialLink = styled.a`
 `;
 
 const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center; // This will center the button horizontally
+  justify-content: space-between; // This will push the button to the bottom
   width: 100%;
   max-width: 500px;
+  height: 100%;
 `;
 
 const Input = styled.input`
@@ -59,11 +65,26 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
+const IconContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+
+const PTagIconContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8em;
+`;
+
 const Contact = () => {
   return (
     <ContactContainer>
-      <h2>CONTACTS PAGE</h2>
-      <p>Fill the form below to send me a message</p>
+      <h2>Send Me an Email Here</h2>
+      <p></p>
 
       <Form action="https://formspree.io/YourFormspreeIDHere" method="POST">
         <Input type="text" name="name" placeholder="Your Name" />
@@ -72,14 +93,20 @@ const Contact = () => {
         <Textarea name="message" placeholder="Message"></Textarea>
         <Button type="submit">Send</Button>
       </Form>
-
-      <p>Or connect with me on social media</p>
-      <SocialLink href="#">
-        <IoLogoGithub style={{ color: "Cyan", fontSize: "4em" }} />
-      </SocialLink>
-      <SocialLink href="#">
-        <IoLogoLinkedin style={{ color: "cyan", fontSize: "4em" }} />
-      </SocialLink>
+      <PTagIconContainer>
+        <p>Or contact me via social media</p>
+      </PTagIconContainer>
+      <IconContainer>
+        <SocialLink href="#">
+          <IoLogoGithub style={{ color: "Cyan", fontSize: "4em" }} />
+        </SocialLink>
+        <SocialLink href="#">
+          <IoLogoLinkedin style={{ color: "cyan", fontSize: "4em" }} />
+        </SocialLink>
+        <SocialLink href="#">
+          <IoLogoDiscord style={{ color: "cyan", fontSize: "4em" }} />
+        </SocialLink>
+      </IconContainer>
     </ContactContainer>
   );
 };
