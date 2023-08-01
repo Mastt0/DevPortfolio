@@ -77,7 +77,7 @@ const PTagIconContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 8em;
+  margin-top: 5em;
 `;
 
 const Contact = () => {

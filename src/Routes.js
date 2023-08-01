@@ -2,7 +2,7 @@ import React from "react";
 import { useRoutes } from "react-router-dom";
 
 import Navbar from "./Navbar";
-import Home from "./components/HomeLayout";
+import Home from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
